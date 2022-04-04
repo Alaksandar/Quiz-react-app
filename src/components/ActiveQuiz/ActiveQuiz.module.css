@@ -1,0 +1,13 @@
+.ActiveQuiz {
+    padding: 20px;
+    color: rgb(252, 238, 49);
+    border: 2px solid rgb(252, 238, 49);
+    border-radius: 5px;
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+.Question {
+    display: flex;
+    justify-content: space-between;
+}
