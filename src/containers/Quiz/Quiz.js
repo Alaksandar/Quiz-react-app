@@ -1,9 +1,9 @@
-import React, {Component} from "react"
-import ActiveQuiz from "../../components/ActiveQuiz/ActiveQuiz"
+import React, {Component} from 'react'
+import ActiveQuiz from '../../components/ActiveQuiz/ActiveQuiz'
 import FinishedQuiz from '../../components/FinishedQuiz/FinishedQuiz'
 import classes from './Quiz.module.css'
 
-class Quiz extends Component {
+export default class Quiz extends Component {
     state = {
         isFinished: false,
         results: {}, // {[id]: 'success' 'error'}
@@ -94,6 +94,10 @@ class Quiz extends Component {
         })
     }
 
+    componentDidMount() {
+        console.log(this.props)
+    }
+
     render () {
         return (
             <div className={classes.Quiz}>
@@ -122,5 +126,3 @@ class Quiz extends Component {
         )
     }
 }
-
-export default Quiz

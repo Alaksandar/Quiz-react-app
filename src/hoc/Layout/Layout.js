@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import MenuToogle from '../../components/Navigation/MenuToogle/MenuToogle'
 import Drawer from '../../components/Navigation/Drawer/Drawer'
 import classes from './Layout.module.css'
