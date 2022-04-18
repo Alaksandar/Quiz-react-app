@@ -8,7 +8,7 @@ const ActiveQuiz = props => {
         <div className={classes.ActiveQuiz}>
             <p className={classes.Question}>
                 <span>
-                    <strong>1.&nbsp;</strong>
+                    <strong>{props.questionNumber}.&nbsp;</strong>
                     {props.question}
                 </span>
                 <small>{props.questionNumber} из {props.quizLength}</small>

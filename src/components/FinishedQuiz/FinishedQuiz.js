@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Button from '../UI/Button/Button'
+import removeEllipsisFromStr from '../../pureFunctions'
 import classes from './FinishedQuiz.module.css'
+
 
 const FinishedQuiz = props => {
 
@@ -9,7 +12,8 @@ const FinishedQuiz = props => {
             total++
         }
         return total
-    }, 0) 
+    }, 0)
+
 
     return (
         <div className={classes.FinishedQuiz}>
@@ -26,7 +30,8 @@ const FinishedQuiz = props => {
                         return (
                             <li key={index}>
                                 <strong>{index + 1}.&nbsp;</strong>
-                                {quizItem.question}
+                                {removeEllipsisFromStr(quizItem.question)}&nbsp;
+                                {quizItem.answers[quizItem.rightAnswerId - 1].text.toUpperCase()}
                                 <i className={cls.join(' ')} />
                             </li>
                         )
@@ -40,10 +45,10 @@ const FinishedQuiz = props => {
                     onClick={props.onRetry}
                     type='primary'
                 >Повторить</Button>
-
-                <Button 
-                    type='success'
-                >Список тестов</Button>
+                <Link to='/'>
+                    <Button type='success'>Список тестов</Button>
+                </Link>
+                
             </div>
         </div>
     )
